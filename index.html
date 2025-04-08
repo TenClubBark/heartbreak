@@ -11,46 +11,63 @@
     <style>
         /* Basic page styling */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: #2c3e50; /* Dark blue-grey background */
-            color: #ecf0f1; /* Light text */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* [cite: 1] */
+            background-color: #2c3e50; /* Dark blue-grey background */ /* [cite: 2] */
+            color: #ecf0f1; /* Light text */ /* [cite: 3] */
             display: flex;
-            justify-content: center; 
-            align-items: center;   
-            min-height: 100vh;     
-            margin: 0;             
-            padding: 20px;         /* Add padding around the container */
-            box-sizing: border-box;
+            justify-content: center; /* [cite: 4] */
+            align-items: center;   /* [cite: 4] */
+            min-height: 100vh;     /* [cite: 4] */
+            margin: 0;             /* [cite: 4] */
+            padding: 20px;         /* Add padding around the container */ /* [cite: 4] */
+            box-sizing: border-box; /* [cite: 5] */
         }
 
         /* Container for the player and title */
         .player-container {
-             max-width: 600px;    /* Max width of the player area */
-             width: 95%;          /* Responsive width */
-             background-color: #34495e; /* Slightly lighter background for the card */
-             padding: 25px 30px;
-             border-radius: 8px;
-             box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-             text-align: center;
+             max-width: 600px; /* Max width of the player area */ /* [cite: 6] */
+             width: 95%; /* Responsive width */ /* [cite: 7] */
+             background-color: #34495e; /* Slightly lighter background for the card */ /* [cite: 8] */
+             padding: 25px 30px; /* [cite: 9] */
+             border-radius: 8px; /* [cite: 9] */
+             box-shadow: 0 5px 20px rgba(0,0,0,0.3); /* [cite: 9] */
+             text-align: center; /* [cite: 9] */
         }
 
         /* Style for the song title heading */
         h1 {
-             margin-top: 0;
-             margin-bottom: 25px;
-             font-size: 1.8em;
-             font-weight: 300; /* Lighter font weight */
+             margin-top: 0; /* [cite: 10] */
+             margin-bottom: 25px; /* [cite: 10] */
+             font-size: 1.8em; /* [cite: 10] */
+             font-weight: 300; /* Lighter font weight */ /* [cite: 10] */
         }
 
         /* Ensure the audio player takes up space */
         #player {
-            width: 100%; /* Make player fill container width */
-            outline: none; /* Remove potential focus outline if not desired */
+            width: 100%; /* Make player fill container width */ /* [cite: 11] */
+            outline: none; /* Remove potential focus outline if not desired */ /* [cite: 12] */
         }
+        
+        /* --- NEW --- Styling for the lyrics section */
+        #lyrics-section {
+            margin-top: 30px; /* Add space above the lyrics */
+            padding-top: 20px; /* Add padding within the lyrics section */
+            border-top: 1px solid #4a647e; /* Optional separator line */
+            text-align: left; /* Align lyrics to the left */
+        }
+
+        #lyrics-section p {
+            font-size: 1.2em; /* Reasonably large font size */
+            line-height: 1.6; /* Adjust line spacing for readability */
+            white-space: pre-wrap; /* Preserve line breaks in lyrics */
+            color: #bdc3c7; /* Slightly muted color for lyrics */
+        }
+        /* --- END NEW --- */
+
 
         /* You can add more specific Plyr overrides here if needed */
         /* Example: Change the accent color (adjust the hex code) */
-        /* :root { --plyr-color-main: #1abc9c; } */
+        /* :root { --plyr-color-main: #1abc9c; } */ /* [cite: 13] */
 
     </style>
 </head>
@@ -61,10 +78,41 @@
         <h1>One More Heartbreak</h1> 
 
         <audio id="player" controls src="OneMoreHeartbreak.mp3">
-            Your browser does not support the audio element.
+            Your browser does not support the audio element. /* [cite: 14] */
         </audio>
 
-    </div> <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+        <div id="lyrics-section">
+            <p>
+[Older sketches... part 1]
+
+I didn't know that I could miss misery
+But meeting you has taught me that it's true
+Even though your eyes read just like history, yeah
+From today my world is all about you ... you
+
+I'll take the pleasure, I'll play the game
+But I'm waiting for the pain of...
+
+One more heartbreak
+Make another huge mistake, yeah
+You and me are doomed to going down in flame
+But bring it on, I'll take all the blame
+For one more heartbreak
+
+Danger's clearly written all over you
+A self-help quiz in a glossy magazine
+You're just my type and I know that the reverse is true, yeah
+Grab your junk, let's find ourselves a scene
+
+[Pre-chorus repeat]
+[Chorus repeat]
+
+
+            </p>
+        </div>
+        </div> 
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -75,8 +123,8 @@
         });
 
         // Optional: Make the player instance accessible in the console for debugging
-        // window.player = player; 
-      });
+        // window.player = player; /* [cite: 15] */
+      }); /* [cite: 16] */
     </script>
 
 </body>
