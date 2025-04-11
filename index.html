@@ -96,7 +96,7 @@ But I'm waiting for the pain of...
 [Chorus]
 One more heartbreak
 Make another huge mistake, yeah
-You and me are doomed to going down in flame
+You and me are doomed to go down in flame
 But bring it on, I'll take all the blame
 For one more heartbreak
 
@@ -118,8 +118,7 @@ Grab your junk, let's find ourselves a scene
       document.addEventListener('DOMContentLoaded', () => {
         // Find the audio element by its ID and initialize Plyr
         const player = new Plyr('#player', {
-            // You can add Plyr options here if needed
-            // e.g., controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+           controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'] // omit 'settings' or 'playbackRate'
         });
         player.setPlaybackRate(1)
         // Optional: Make the player instance accessible in the console for debugging
